@@ -1,5 +1,16 @@
-post
-{
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+post{
 always
-}
 emailext body: 'wasssssssssup', subject: 'hello', to: 'swapnil05sahu@gmail.com'
+      }
+    }
+}
