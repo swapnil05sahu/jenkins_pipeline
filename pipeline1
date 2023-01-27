@@ -1,21 +1,5 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('build') {
-            steps {
-                echo 'Hello build'
-            }
-        }
-        stage('test') {
-            steps {
-                echo 'Hello test'
-            }
-        }
-        stage('deploy') {
-            steps {
-                echo 'Hello deploy'
-            }
-        }
-    }
+post
+{
+always
 }
+emailext body: 'wasssssssssup', subject: 'hello', to: 'swapnil05sahu@gmail.com'
